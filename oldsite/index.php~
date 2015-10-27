@@ -1,0 +1,23 @@
+<?php
+
+global $pageTitle;
+$pageTitle = 'Home';
+require("header.php");
+
+echo'<h2>Welcome to the online home of the Pittsburgh Go Association!</h2>
+
+<p>The Pittsburgh Go Association is a go club located in Pittsburgh, PA dedicated to promoting the game of go (baduk, igo, weiqi) in the form of tournaments, rankings, and educational opportunities.  If you play go or would like to learn to play go, come join us at one of our <a href="meetings.php">meetings</a>.</p>
+
+<p>Contact our president, '.formatEmail('nathaniel@cmu.edu', 'Nate Travis').', or our vice president, '.formatEmail('sabiurr@gmail.com', 'Sabiur Rahman').', with any general inquires about the club. Also look for us in our room on <a href="http://www.gokgs.com/">KGS</a>, Pittsburgh Go, listed under clubs.</p>
+
+</div>
+<div id="section">
+
+<h3>Announcements</h3>
+
+<p>We finally updated our site! Also, stay tuned for information about a fall tournament this year!</p>
+';
+
+require("footer.htm");
+
+?>

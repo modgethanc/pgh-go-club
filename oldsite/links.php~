@@ -1,0 +1,26 @@
+<?php
+
+global $pageTitle;
+$pageTitle = 'Links';
+require("header.php");
+
+echo'
+<h2>Links</h2>
+
+<p>There are a great deal of wonderful go resources on the web.  Here are a handful that members of the Pittsburgh Go Association often reccomend.</p>
+
+<dl>
+
+<dt><a href="http://www.gokgs.com/">KGS</a></dt>
+<dd>KGS is a go server.</dd>
+
+<dt>Sensei\'s Library</dt>
+<dd>Go Wiki</dd>
+
+</dl>
+
+';
+
+require("footer.htm");
+
+?>

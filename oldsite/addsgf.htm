@@ -1,0 +1,80 @@
+
+<html>
+ <head>
+  <title>Pittsburgh Go Association - Game Upload</title>  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="The Pittsburgh Go Association is a go club located in Pittsburgh, PA where people of all ages and skill levels meet to play and enjoy the game of go."> 
+  <meta name="keywords" content="pittsburgh, go, association, club, weiqi, baduk, game"> 
+
+ </head>
+ <body>
+
+ <div id="backbackground">
+  <div id="background">
+   <div id="heading">
+    <h1>The Pittsburgh Go Association</h1>
+   </div>
+
+   <div id="midsection">
+    <div id="nav">
+     <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="meetings.php">Meetings</a></li>
+      <li><a href="events.php">Events</a></li>
+      <li><a href="material.php">Materials</a></li>
+      <li><a href="history.php">History</a></li>
+     </ul>
+    </div>
+  
+    <div id="content">
+     <div id="section">
+<div id="logininfo"><p>You are logged in as Kim. (<a href="logout.php?ref=/pga/addsgf.php">logout</a>)</p></div><ul class="error"><li>You must enter an sgf file.</li><li>You must enter an sgf file.</li></ul>
+
+<script language="javascript">
+function togglePointsBox()
+{
+  if(document.sgfupload.by.value == "P")
+    document.sgfupload.points.disabled=false;
+  else
+    document.sgfupload.points.disabled=true;
+}
+ 
+</script>
+
+<form action="addsgf.php" method="post" enctype="multipart/form-data" name="sgfupload">
+ <label for="white">White Player: </label>
+  <select name="white" id="white">
+   <option></option>
+   <option value="unknown">Someone Else</option>
+  </select><br />
+ <label for="black">Black Player: </label>
+  <select name="black" id="black">
+   <option></option>
+   <option value="unknown">Someone Else</option>
+  </select><br />
+ <label for="winner">Result: </label>
+  <select name="winner" id="winner" class="small">
+   <option></option>
+  </select> <span class="formtext">+</span>
+  <select name="by" id="by" class="small" onChange="togglePointsBox();">
+   <option></option>
+  </select>
+  <input type="text" name="points" id="points" class="tiny" disabled="disabled" maxlength="5" /><br />
+ <label for="date_played">Date Played: </label>
+  <input type="text" name="date_played" id="date_played" class="small" maxlength="10" /> <span class="formnote">(MM/DD/YYYY)</span><br />
+ <label for="sgffile">SGF File: </label>
+  <input type="hidden" name="MAX_FILE_SIZE" value="3000" />
+  <input type="file" id="sgffile" name="sgffile" class="file" /> <br />
+ <input type="submit" value="Submit" class="button" />
+</form>
+     </div>
+    </div>
+   </div>
+
+   <div id="footer">
+    <p>Site last updated: 6/14/07</p>
+   </div>
+  </div>
+ </div>
+
+ </body>
+</html>
